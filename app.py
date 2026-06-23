@@ -16,9 +16,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 2. 🧠 Gemini API Setup
-API_KEY = "AQ.Ab8RN6Iwakmg838mU3TIuHYiBwrtqkESUT17M3fBPXzUqoAB2Q"
-client = genai.Client(api_key=API_KEY)
-
+import streamlit as st
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 # =====================================================================
 # 🎭 THE 4 MASTER PROMPTS (100% Raghav-Free Edition)
 # =====================================================================
